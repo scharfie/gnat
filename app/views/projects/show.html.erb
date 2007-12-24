@@ -3,10 +3,13 @@
 <table class="tickets">
   <thead>
     <tr>
+      <td>#</td>
       <td>Status</td>
       <td>Ticket</td>
-      <td>Created</td>
+      <td>Age</td>
     </tr>
   </thead>  
   <%= render :partial => 'ticket', :collection => resource.tickets %>
-</table>  
+</table>
+
+<%= link_to 'Create new ticket', new_project_ticket_url(resource) %> 

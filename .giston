@@ -11,3 +11,9 @@
 - dir: vendor/plugins/resources_controller
   rev: 542
   url: http://svn.ardes.com/rails_plugins/resources_controller/
+- dir: vendor/plugins/response_for
+  rev: 539
+  url: http://svn.ardes.com/rails_plugins/response_for/
+- dir: vendor/plugins/response_for_resources_controller
+  rev: 524
+  url: http://svn.ardes.com/rails_plugins/response_for_resources_controller/

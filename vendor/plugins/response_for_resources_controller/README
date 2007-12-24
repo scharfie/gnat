@@ -1,0 +1,10 @@
+http://plugins.ardes.com > response_for_resources_controller
+
+= response_for_resources_controller
+
+This plugin mashes response_for and resources_controller together to allow much
+more fine-grained overriding of actions.
+
+Requires response_for and resources_controller
+
+Specs are svn:externaled from resources_controller, and the action modules are switched

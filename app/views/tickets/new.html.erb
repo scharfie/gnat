@@ -1,0 +1,13 @@
+<% heading 'Creating new ticket for ' + span(enclosing_resource.name) %>
+
+<% form_for_resource do |form| %>
+  <%= form.label :title %><br />
+  <%= form.text_field :title %>
+  <br />
+  <%= form.label :description %><br />
+  <%= form.text_area :description %>
+  
+  <div class="actions">
+    <%= submit_tag 'Save' %>
+  </div>
+<% end %>
