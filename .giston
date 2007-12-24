@@ -2,3 +2,9 @@
 - dir: vendor/plugins/restful_authentication
   rev: 3072
   url: http://svn.techno-weenie.net/projects/plugins/restful_authentication/
+- dir: vendor/plugins/rspec
+  rev: 3198
+  url: http://rspec.rubyforge.org/svn/trunk/rspec
+- dir: vendor/plugins/rspec_on_rails
+  rev: 3198
+  url: http://rspec.rubyforge.org/svn/trunk/rspec_on_rails
