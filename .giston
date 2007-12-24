@@ -1,0 +1,4 @@
+--- 
+- dir: vendor/plugins/restful_authentication
+  rev: 3072
+  url: http://svn.techno-weenie.net/projects/plugins/restful_authentication/
