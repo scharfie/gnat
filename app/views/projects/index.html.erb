@@ -1,0 +1,8 @@
+<%= heading 'Projects' %>
+
+<dl>
+  <% for project in resources %>
+  <dt><%= link_to(project.name, project) %></dt>
+  <dd><%= project.description %></dd>
+  <% end %>
+</dl>  
