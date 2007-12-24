@@ -8,3 +8,6 @@
 - dir: vendor/plugins/rspec_on_rails
   rev: 3198
   url: http://rspec.rubyforge.org/svn/trunk/rspec_on_rails
+- dir: vendor/plugins/resources_controller
+  rev: 542
+  url: http://svn.ardes.com/rails_plugins/resources_controller/
