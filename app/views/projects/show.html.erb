@@ -1,0 +1,12 @@
+<% heading span(resource.name) + ' tickets' %>
+
+<table class="tickets">
+  <thead>
+    <tr>
+      <td>Status</td>
+      <td>Ticket</td>
+      <td>Created</td>
+    </tr>
+  </thead>  
+  <%= render :partial => 'ticket', :collection => resource.tickets %>
+</table>  
