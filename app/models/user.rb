@@ -88,7 +88,4 @@ class User < ActiveRecord::Base
 end
 
 class User
-  def developer?
-    true
-  end
 end

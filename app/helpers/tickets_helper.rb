@@ -19,4 +19,15 @@ module TicketsHelper
       %Q{Status changed from "#{status[0]}" to "#{status[1]}"}
     end  
   end
+  
+  def audit_changes(audit)
+    changes = []
+    changes << audit_state(audit)
+    
+    changes.compact!
+    return if changes.empty?
+    changes.map! { |e| content_tag :li, e }
+    content_tag :ul, changes, :class => 'changes'
+  end
+  
 end

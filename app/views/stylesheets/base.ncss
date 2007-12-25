@@ -152,6 +152,17 @@ div.ticket {
   	  font-size: 1.6em;
 		}
 		
+	  ul.changes {
+		  margin-bottom: 10px;
+		  li {
+			  font-weight: bold;
+			  color: #777;
+			  color: #590;
+			  padding: 3px 0;
+			  border-bottom: dotted 1px #ccc;
+			}
+		}		
+		
 		span.user {
 			xfont-size: 1.5em;
 		}

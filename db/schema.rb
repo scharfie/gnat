@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "audits", :force => true do |t|
     t.integer  "auditable_id"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(:version => 6) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+    t.boolean  "developer",                               :default => false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
 end

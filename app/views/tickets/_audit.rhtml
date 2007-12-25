@@ -8,10 +8,9 @@
     </span>
   </div>
   <div class="description">
-    <%= audit_state(audit) %>
-    
+    <%= audit_changes(audit) %>
+      
     <%= audit.comments %>
-    
     
     <% audit.changes.each do |key, values| %>
       <% next if key == 'status' %>
