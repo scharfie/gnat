@@ -4,11 +4,17 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>gnat</title>
-  
+  <%= stylesheet_link_tag 'reset', 'base' %>
 </head>
 <body>
+<div id="container">
   <%= render :partial => 'shared/header' %>
-  <%= yield :heading %>
-  <%= yield %>
+  <div id="content">
+    <div id="main">
+      <h2 class="heading"><%= yield :heading %></h2>
+      <%= yield %>
+    </div>  
+  </div>
+</div>
 </body>
 </html>

@@ -1,11 +1,21 @@
-<% heading link_to(enclosing_resource.name, enclosing_resource) + 
-   " ticket ##{resource.id} - #{resource.title}" %>
-   
+<% heading do %>
+  <%= image_tag 'avatar.gif', :align => 'left', :class => 'avatar' %>
+  <span class="number">
+    #<%= resource.id %>
+  </span>
+  <%= image_tag 'states/open.png', :class => 'state' %>
+  <span class="title"><%= resource.title %></span>
+  <span class="reported">
+    Reported by Chris | <%= resource.created_on.to_s(:long) %>
+  </span>
+<% end %>
+
+<div class="ticket">
+  <div class="description">
+    <%= simple_format resource.description %>    
+  </div>
+</div> 
+      
 <%= link_to 'Edit', edit_resource_path(resource) %>
-<br>
-<%= resource.description %>
-
-
-<hr />
 
 <%= debug resource.audits %>

@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-  def heading(text=nil)
-    content_for :heading, content_tag(:h2, text)
+  def heading(text=nil, &block)
+    content_for :heading, text, &block
   end
   
   def span(text, options={})

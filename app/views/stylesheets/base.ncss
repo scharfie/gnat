@@ -1,0 +1,89 @@
+body {
+  font: normal 76% 'Lucida Grande';
+  background: #60A4D3;
+}
+
+a {
+	color: #fc0;
+}
+
+p {
+	margin: 0.5em 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lucida Grande';
+}
+
+h2.heading {
+	margin: -25px -25px 25px;
+	background: #0077BB;
+	color: #fff;
+	padding: 10px;
+	font-size: 1.6em;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+#header {
+	background: #02243C;
+	color: #fff;
+	padding: 20px 20px;
+	position: relative;
+	
+	h1 {
+	  font: normal 3em Inconsolata;	
+	}	
+	
+	div.meta {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+}
+
+#main {
+	margin: 10px 15px;
+	padding: 25px;
+	width: 600px;
+	background: #fff;
+	-moz-border-radius: 5px;
+}
+
+/** tickets **/
+h2.heading {
+	img.avatar {
+	  padding-right: 10px;	
+	}
+	
+	span.number {
+	  background: #005795;
+	  color: #fff;
+	  float: right;
+	  text-align: center;
+	  margin-bottom: 5px;
+	  line-height: 50px;
+	  height: 50px;
+		width: 70px;
+		-moz-border-radius: 5px;
+	}
+	
+	img.state {
+		clear: right;
+		float: right;
+	}
+	
+	span.reported {
+		display: block;
+		color: #AEE9FE;
+		font-size: 0.6em;
+	}
+}
+
+div.ticket {
+	div.description {
+		margin: -35px -25px 10px;
+		padding: 10px 85px 10px 70px;
+		background: #0077BB;
+    color: #D4ECFE;
+	}
+}
