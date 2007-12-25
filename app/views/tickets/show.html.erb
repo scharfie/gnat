@@ -22,21 +22,32 @@
     
     <% form_for_resource do |form| %>
       <%= form.label :comments %>
-      <%= form.text_area :comments, :rows => 15 %>
+      <%= textile_editor :ticket, :comments, :rows => 15 %>
       
-      <% if current_user.developer? %>
       <p>
-        <%= form.radio_button :status, 'open', :id => 'status-open' %> 
-          <label for="status-open">accept and assign to </label>
-          <select><option>me (scharfie)</option></select>
-        <%= form.radio_button :status, 'invalid', :id => 'status-invalid' %> <label for="status-invalid">mark invalid</label>
-        <%= form.radio_button :status, 'resolved', :id => 'status-resolved' %> <label for="status-resolved">mark resolved</label>
+        <%= form.radio_button :status, resource.current_state.to_s, :id => 'status-current' %> 
+          <label for="status-current">Leave alone</label>
+        
+        <% if resource.closed? %>
+          <%= form.radio_button :status, 'open', :id => 'status-open' %> 
+            <label for="status-open">Re-open</label>
+        <% elsif current_user.developer? %>
+          <% if resource.new? %>
+            <%= form.radio_button :status, 'open', :id => 'status-open' %> 
+              <label for="status-open">Accept</label>
+          <% end %>
+            <!-- <label for="status-open">accept and assign to </label>
+            <select><option>me (scharfie)</option></select> -->
+          <%= form.radio_button :status, 'invalid', :id => 'status-invalid' %> 
+            <label for="status-invalid">Close as invalid</label>
+          <%= form.radio_button :status, 'resolved', :id => 'status-resolved' %> 
+            <label for="status-resolved">Close as resolved</label>
+        <% end %>
       </p>
-      <% end %>
       <p><%= submit_tag 'Submit comment' %></p>
     <% end %>
   </div>  
   
 </div>
-      
 
+<% head textile_editor_initialize %>

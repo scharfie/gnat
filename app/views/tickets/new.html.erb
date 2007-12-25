@@ -1,5 +1,7 @@
 <% heading 'Creating new ticket for ' + span(enclosing_resource.name) %>
 
+<div class="ticket-actions">
 <% form_for_resource do |form| %>
   <%= render :partial => 'form', :object => form %>
 <% end %>
+</div>

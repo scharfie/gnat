@@ -4,7 +4,9 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>gnat</title>
+  <%= javascript_include_tag :defaults %>
   <%= stylesheet_link_tag 'reset', 'base' %>
+  <%= yield :head %>
 </head>
 <body>
 <div id="container">

@@ -13,6 +13,8 @@ module TicketsHelper
       'Ticket has been resolved (now closed)'
     when %w(open invalid), %w(new invalid)
       'Ticket has been marked as invalid (now closed)'
+    when %w(invalid open), %w(resolved open)
+      %Q{Ticket has been re-opened (was marked as #{status[0]})}  
     else    
       %Q{Status changed from "#{status[0]}" to "#{status[1]}"}
     end  

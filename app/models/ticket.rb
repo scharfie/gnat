@@ -35,14 +35,9 @@ public
     self.comments.blank? ? super : true
   end  
   
-  # def comments=(value)
-  #   @changed_attributes ||= {}
-  #   if value.blank?
-  #     @changed_attributes.delete :comments
-  #   else
-  #     @changed_attributes[:comments] = [nil, value]
-  #   end  
-  # end
+  def closed?
+    invalid? || resolved?
+  end
 
   def user
     # stub -- ONLY using current_user for testing!!

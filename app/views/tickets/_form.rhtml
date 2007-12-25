@@ -1,9 +1,15 @@
-  <%= form.label :title %><br />
-  <%= form.text_field :title %>
-  <br />
-  <%= form.label :description %><br />
-  <%= form.text_area :description %>
+  <p>
+    <%= form.label :title %><br />
+    <%= form.text_field :title, :style => 'width: 90%; padding: 5px; font-size: 1.5em' %>
+  </p>
   
+  <p>
+    <%= form.label :description %><br />
+    <%= textile_editor :ticket, :description %>
+  </p>
+
   <div class="actions">
     <%= submit_tag 'Save' %>
   </div>
+
+  <% head textile_editor_initialize %>

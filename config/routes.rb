@@ -31,12 +31,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'stylesheets/:action.:format', :controller => 'stylesheets'
 
-  map.resources :projects do |project| #, :has_many => [:tickets]
-    project.resources :tickets, :member => {
-      :accept => :get,
-      :invalidate => :get
-    }
-  end
+  map.resources :projects, :has_many => [:tickets]
+  
+  map.resources :tickets
 
   map.resources :users
   map.resource :session, :controller => 'sessions'

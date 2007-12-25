@@ -1,15 +1,18 @@
-<% heading span(enclosing_resource.name) + ' tickets' %>
+<% heading span(enclosing_resource ? enclosing_resource.name : 'All') + ' tickets' %>
 
 <table class="tickets">
   <thead>
     <tr>
-      <td>#</td>
-      <td>Status</td>
-      <td>Ticket</td>
-      <td>Age</td>
+      <th class="number">#</th>
+      <th class="total" colspan="2"><%= pluralize resources.length, 'ticket' %></th>
+      <th class="stamp">Age</th>
     </tr>
   </thead>  
   <%= render :partial => 'ticket', :collection => resources %>
 </table>
 
-<%= link_to 'Create new ticket', new_project_ticket_url(enclosing_resource) %> 
+<% if enclosing_resource %>
+  <p>
+    <%= link_to 'Create new ticket', new_project_ticket_url(enclosing_resource) %> 
+  </p>  
+<% end %>  

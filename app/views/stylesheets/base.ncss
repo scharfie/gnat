@@ -4,7 +4,7 @@ body {
 }
 
 a {
-	color: #fc0;
+	color: #590;
 }
 
 p {
@@ -64,6 +64,10 @@ h2.heading {
 		li {
 		  float: left;
 		  padding: 8px 4px 8px 0;
+		
+		  .all {
+			  margin-left: 25px;
+			}
 		}
 		
 		a {
@@ -81,7 +85,7 @@ h2.heading {
 }
 
 #main {
-	margin: 10px 15px;
+	margin: 10px 20px;
 	padding: 10px;
 	width: 600px;
 	background: #fff;
@@ -199,6 +203,68 @@ div.ticket-actions {
 	}
 }
 
-input.accept-button {
-	background: green;
+table.tickets {
+	width: 100%;
+	border-bottom: solid 1px #ccc;
+	
+	a {
+	  text-decoration: none;
+	  color: #333;
+	  font-weight: bold;
+	}
+
+	td, th {
+		padding: 8px 2px;
+		background: #f7f7f7;
+	}
+	
+	th {
+	  border-bottom: solid 1px #ccc;
+	  font-weight: bold;
+	  color: #555;
+	  font-size: 0.95em;
+	
+		.number {
+		  -moz-border-radius: 10px 0 0 0;	
+		  text-align: center;
+		}
+	
+		.stamp {
+			-moz-border-radius: 0 10px 0 0;
+		}
+  }
+	
+	td {
+		vertical-align: top;
+		padding: 12px 2px;
+		
+		.number {
+		  text-align: center;	
+		  width: 3em;
+		  font-weight: bold;
+  		color: #777;
+		}
+		
+		.status {
+		  width: 80px;
+		} 
+		
+		.stamp {
+			width: 10em;
+			color: #777;
+		}
+	}
+	
+	tr.odd td {
+		background: #fff;
+	}
+	
+  tr:hover td {
+	  background: #0072C3;
+  }
+  
+  tr:hover td,
+  tr:hover a {
+	  color: #fff;
+  }
 }
