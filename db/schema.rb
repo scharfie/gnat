@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "audits", :force => true do |t|
     t.integer  "auditable_id"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(:version => 7) do
   add_index "audits", ["user_id", "user_type"], :name => "user_index"
   add_index "audits", ["auditable_id", "auditable_type"], :name => "auditable_index"
 
+  create_table "milestones", :force => true do |t|
+    t.string   "name"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.string   "key"
@@ -42,7 +49,9 @@ ActiveRecord::Schema.define(:version => 7) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",      :default => "new"
+    t.string   "status",         :default => "new"
+    t.integer  "milestone_id"
+    t.integer  "assigned_to_id"
   end
 
   create_table "users", :force => true do |t|

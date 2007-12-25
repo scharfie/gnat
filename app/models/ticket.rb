@@ -21,6 +21,8 @@ class Ticket < ActiveRecord::Base
   end
   
   belongs_to :project
+  belongs_to :milestone
+  belongs_to :assigned_to, :class_name => 'User'
   
   attr_accessor :user, :comments
 public

@@ -1,6 +1,6 @@
   <tr class="<%= cycle('odd', '') %>">
     <td class="number"><%= ticket.id %></td>
     <td class="status"><%= ticket_state(ticket) %></td>
-    <td><%= link_to ticket.title, resource_path(ticket) %></td>
+    <td><%= link_to ticket.title, project_ticket_path(ticket.project, ticket) %></td>
     <td class="stamp"><%= time_ago_in_words ticket.created_on %></td>
   </td>

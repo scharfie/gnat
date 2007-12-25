@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   has_many :tickets
+  has_many :milestones
   
 public
   # returns a more friendly URL consisting of

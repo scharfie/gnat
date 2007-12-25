@@ -21,8 +21,17 @@
     <h3>Submit comment</h3>
     
     <% form_for_resource do |form| %>
-      <%= form.label :comments %>
       <%= textile_editor :ticket, :comments, :rows => 15 %>
+      
+      <p>
+        Milestone: 
+        <%= form.select :milestone_id, ['(none)'] + enclosing_resource.milestones.collect { |m| [ m.name, m.id ] }, { :include_blank => false } %>
+        
+        &nbsp;
+        Assign to:
+        <%= form.select :assigned_to_id, ['(none)'] + User.find(:all, 
+          :conditions => ['developer = ?', true]).collect { |m| [ m.login, m.id ] } %>
+      </p>
       
       <p>
         <%= form.radio_button :status, resource.current_state.to_s, :id => 'status-current' %> 
@@ -44,7 +53,9 @@
             <label for="status-resolved">Close as resolved</label>
         <% end %>
       </p>
-      <p><%= submit_tag 'Submit comment' %></p>
+      <p>
+        <%= submit_tag 'Submit comment' %>
+      </p>
     <% end %>
   </div>  
   
