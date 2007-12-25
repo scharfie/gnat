@@ -2,5 +2,7 @@
     <td class="number"><%= ticket.id %></td>
     <td class="status"><%= ticket_state(ticket) %></td>
     <td><%= link_to ticket.title, project_ticket_path(ticket.project, ticket) %></td>
+    <td><%= ticket.assigned_to ? ticket.assigned_to.login : '' %>
+    <td><%= ticket.milestone ? ticket.milestone.name : '' %>
     <td class="stamp"><%= time_ago_in_words ticket.created_on %></td>
   </td>
