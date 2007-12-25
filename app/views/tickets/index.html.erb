@@ -1,0 +1,15 @@
+<% heading span(enclosing_resource.name) + ' tickets' %>
+
+<table class="tickets">
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Status</td>
+      <td>Ticket</td>
+      <td>Age</td>
+    </tr>
+  </thead>  
+  <%= render :partial => 'ticket', :collection => resources %>
+</table>
+
+<%= link_to 'Create new ticket', new_project_ticket_url(enclosing_resource) %> 

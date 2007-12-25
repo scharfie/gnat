@@ -1,0 +1,6 @@
+  <tr>
+    <td><%= link_to ticket.id, resource_path(ticket) %></td>
+    <td><%= ticket.status %></td>
+    <td><%= link_to ticket.title, resource_path(ticket) %></td>
+    <td><%= time_ago_in_words ticket.created_on %></td>
+  </td>

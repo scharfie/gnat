@@ -85,6 +85,10 @@ class User < ActiveRecord::Base
     def password_required?
       crypted_password.blank? || !password.blank?
     end
-    
-    
+end
+
+class User
+  def developer?
+    true
+  end
 end

@@ -27,17 +27,56 @@ h2.heading {
 #header {
 	background: #02243C;
 	color: #fff;
-	padding: 20px 20px;
+	padding: 20px 20px 40px;
 	position: relative;
 	
 	h1 {
 	  font: normal 3em Inconsolata;	
+		font-family: Lucida Grande;
+
+		color: #4D6575;
+
+		span.gnat {
+		  color: #fff;	
+		}
+	
+	  span.project {
+		  color: #D4ECFE;
+		  xborder-left: solid 1px #00b7ff;
+		  xpadding-left: 0.5em;
+		}
 	}	
 	
 	div.meta {
 		position: absolute;
 		right: 20px;
 		top: 20px;
+	}
+	
+	div#tabs {
+		position: absolute;
+		bottom: 0;
+		
+		ul {
+		  list-style: none;	
+		}
+		
+		li {
+		  float: left;
+		  padding: 8px 4px 8px 0;
+		}
+		
+		a {
+			padding: 8px 15px;
+			background: #590;
+		  color: #D4FFBB;
+		  text-decoration: none;
+		  -moz-border-radius: 5px 5px 0 0;
+		
+		  :hover {
+			  color: #fff;
+		  }
+		}
 	}
 }
 
@@ -98,18 +137,68 @@ div.ticket {
 	}
 	
 	div.audit {
-		background: #eee;
-		background: #F7F7F7;
+		background: none;
 		padding: 10px;
 		margin-bottom: 10px;
 		border: solid 2px #eee;
 		border-width: 0 0px 2px 0;
 		x-moz-border-radius: 5px;
 		
+		div.header {
+  	  font-size: 1.6em;
+		}
+		
+		span.user {
+			xfont-size: 1.5em;
+		}
+		
+		span.stamp {
+			display: block;
+			font-size: 0.6em;
+			color: #777;
+		}
+		
 		div.description {
 			margin: 0;
+			padding-left: 60px;
 		  background: none;	
 		  color: inherit;
 		}
 	}
+	
+	div.audit-odd {
+		background: #eee;
+		background: #F7F7F7;		
+	}
+}
+
+div.ticket-actions {
+	background: #eee;
+	border-bottom: solid 2px #ccc;
+	xbackground: #0077BB;
+  xcolor: #D4ECFE;
+  xcolor: #fff;
+	padding: 10px;
+	margin-bottom: 5px;
+
+  h3 {
+	  font-size: 1.4em;
+	  color: #fff;
+	  margin: -10px -10px 10px;
+	  padding: 10px;
+	  background: #005795;
+	  background: #590;
+	}
+	
+	textarea {
+		display: block;
+	  width: 570px;
+	  padding: 5px;
+	  font-size: 1.5em;
+	  border: solid 1px #ccc;	
+	}
+}
+
+input.accept-button {
+	background: green;
 }

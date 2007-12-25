@@ -1,4 +1,4 @@
-<div id="header">
+<div id="header" class="clearfix">
   <div class="meta">
     <% if logged_in? %>
       <%= current_user.username %>
@@ -7,5 +7,19 @@
     <% end %>
   </div>
   
-  <h1><span>gnat</span></h1>
+  <h1>
+    <span class="gnat">gnat</span>
+    <% if current_project %>
+    | <span class="project"><%= current_project.name %></span>
+    <% end %>
+  </h1>
+  
+  <div id="tabs">
+    <ul>
+      <li><%= link_to 'Projects', projects_path %></li>
+      <% if current_project %>
+      <li><%= link_to 'Tickets', project_tickets_path(current_project) %></li>
+      <% end %>
+    </ul>  
+  </div>  
 </div>

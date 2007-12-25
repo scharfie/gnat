@@ -3,6 +3,8 @@
 
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
+  attr_accessor :current_project
+  helper_method :current_project
   
   helper :all # include all helpers, all the time
 
@@ -12,7 +14,22 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_current_user
  
-public
+  # manually load the enclosing resources
+  # and then capture the project
+  before_filter :load_enclosing_resources
+  before_filter :capture_project
+
+protected
+  # stub method for non-RC controllers
+  def load_enclosing_resources
+    # this is a stub method for controllers
+    # that do not use RC
+  end
+
+  def capture_project
+    self.current_project = @project
+  end
+ 
   def get_current_user
     User.current_user = self.current_user
   end
