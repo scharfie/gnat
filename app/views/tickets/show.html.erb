@@ -1,4 +1,11 @@
 <% heading link_to(enclosing_resource.name, enclosing_resource) + 
    " ticket ##{resource.id} - #{resource.title}" %>
    
+<%= link_to 'Edit', edit_resource_path(resource) %>
+<br>
 <%= resource.description %>
+
+
+<hr />
+
+<%= debug resource.audits %>

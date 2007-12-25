@@ -1,5 +1,13 @@
 require 'digest/sha1'
 class User < ActiveRecord::Base
+  class << self
+    attr_accessor :current_user
+  end
+  
+  self.current_user = nil
+  
+  alias_attribute :username, :login
+  
   # Virtual attribute for the unencrypted password
   attr_accessor :password
 
@@ -20,7 +28,11 @@ class User < ActiveRecord::Base
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
     u = find_by_login(login) # need to get the salt
-    u && u.authenticated?(password) ? u : nil
+    if u && u.authenticated?(password)
+      self.current_user = u
+    else 
+      nil
+    end
   end
 
   # Encrypts some data with the salt.

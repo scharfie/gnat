@@ -17,3 +17,9 @@
 - dir: vendor/plugins/response_for_resources_controller
   rev: 524
   url: http://svn.ardes.com/rails_plugins/response_for_resources_controller/
+- dir: vendor/plugins/css_dryer
+  rev: 50
+  url: http://opensource.airbladesoftware.com/trunk/plugins/css_dryer
+- dir: vendor/plugins/acts_as_audited
+  rev: 283
+  url: http://source.collectiveidea.com/public/rails/plugins/acts_as_audited/

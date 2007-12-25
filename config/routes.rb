@@ -29,6 +29,8 @@ ActionController::Routing::Routes.draw do |map|
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => 'projects', :action => 'index', :erp => '/projects' 
 
+  map.connect 'stylesheets/:action.:format', :controller => 'stylesheets'
+
   map.resources :projects, :has_many => [:tickets]
 
   map.resources :users
