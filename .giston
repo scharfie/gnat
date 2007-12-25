@@ -23,3 +23,6 @@
 - dir: vendor/plugins/acts_as_audited
   rev: 283
   url: http://source.collectiveidea.com/public/rails/plugins/acts_as_audited/
+- dir: vendor/plugins/acts_as_state_machine
+  rev: 66
+  url: http://elitists.textdriven.com/svn/plugins/acts_as_state_machine/trunk

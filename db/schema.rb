@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "audits", :force => true do |t|
     t.integer  "auditable_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",      :default => "new"
   end
 
   create_table "users", :force => true do |t|
