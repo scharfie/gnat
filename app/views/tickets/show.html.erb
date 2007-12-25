@@ -1,5 +1,5 @@
 <% heading do %>
-  <%= image_tag 'avatar.gif', :align => 'left', :class => 'avatar' %>
+  <%= avatar(resource.user) %>
   <span class="number">
     #<%= resource.id %>
   </span>
@@ -10,12 +10,13 @@
   </span>
 <% end %>
 
+<%#= link_to 'Edit', edit_resource_path(resource) %>
+
 <div class="ticket">
   <div class="description">
     <%= simple_format resource.description %>    
   </div>
-</div> 
+  <%= render :partial => 'audit', :collection => resource.audits %>
+</div>
       
-<%= link_to 'Edit', edit_resource_path(resource) %>
 
-<%= debug resource.audits %>

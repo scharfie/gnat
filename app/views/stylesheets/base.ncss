@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h2.heading {
-	margin: -25px -25px 25px;
+	margin: -10px -10px 25px;
 	background: #0077BB;
 	color: #fff;
 	padding: 10px;
@@ -43,17 +43,27 @@ h2.heading {
 
 #main {
 	margin: 10px 15px;
-	padding: 25px;
+	padding: 10px;
 	width: 600px;
 	background: #fff;
 	-moz-border-radius: 5px;
 }
 
+div.avatar {
+	background: #fff;
+	float: left;
+  margin-right: 10px;
+  padding: 5px 5px 0 5px;  
+
+  img {
+	  width: 40px;
+	  height: 40px;
+	}
+}
+
+
 /** tickets **/
 h2.heading {
-	img.avatar {
-	  padding-right: 10px;	
-	}
 	
 	span.number {
 	  background: #005795;
@@ -81,9 +91,25 @@ h2.heading {
 
 div.ticket {
 	div.description {
-		margin: -35px -25px 10px;
+		margin: -35px -10px 10px;
 		padding: 10px 85px 10px 70px;
 		background: #0077BB;
     color: #D4ECFE;
+	}
+	
+	div.audit {
+		background: #eee;
+		background: #F7F7F7;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: solid 2px #eee;
+		border-width: 0 0px 2px 0;
+		x-moz-border-radius: 5px;
+		
+		div.description {
+			margin: 0;
+		  background: none;	
+		  color: inherit;
+		}
 	}
 }

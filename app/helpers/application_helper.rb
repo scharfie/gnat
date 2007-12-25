@@ -7,4 +7,8 @@ module ApplicationHelper
   def span(text, options={})
     content_tag :span, text, options
   end
+  
+  def avatar(user=nil)
+    "<div class=\"avatar\">" + image_tag('avatar.gif') + '</div>'
+  end
 end

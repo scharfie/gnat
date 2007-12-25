@@ -1,0 +1,10 @@
+<div class="audit">
+  <%= avatar(audit.user) %>
+  <%= audit.user.login rescue 'Anonymous' %>
+  <div class="description">  
+    <% audit.changes.each do |key, values| %>
+      <strong><%= key %></strong>
+      <p><%= values.inspect %></p>
+    <% end %>
+  </div>  
+</div>
