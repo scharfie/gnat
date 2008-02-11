@@ -1,7 +1,7 @@
 <% if audit.version > 1 %>
-<div class="audit <%= cycle('audit-odd', '') %>">
-  <div class="header">
-    <%= avatar(audit.user) %>
+<div class="audit <%= cycle('audit-odd', '') %> clearfix <%= 'audit-dev' if audit.user.developer? %>">
+  <div class="heading">
+    <%= avatar(audit.user, :badge => false) %>
     <span class="user"><%= audit.user.login rescue 'Anonymous' %></span>
     <span class="stamp">
       <%= resource.created_on.to_s(:long) %>
@@ -18,5 +18,12 @@
       <p><%= values.inspect %></p>
     <% end %>
   </div>  
+  <!-- <div class="footing">
+    <span class="user"><%= audit.user.login rescue 'Anonymous' %></span>
+    <span class="stamp">
+      <%= resource.created_on.to_s(:long) %>
+    </span>
+  </div> -->
+  
 </div>
 <% end %>

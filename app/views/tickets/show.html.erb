@@ -1,7 +1,9 @@
 <% heading do %>
   <%= avatar(resource.user) %>
-  <span class="number">#<%= resource.id %></span>
-  <%= ticket_state(resource) %>
+  <div class="status">
+    <span class="number">#<%= resource.id %></span>
+    <%= ticket_state(resource) %>
+  </div>  
   <span class="title"><%= resource.title %></span>
   <span class="reported">
     Reported by Chris | <%= resource.created_on.to_s(:long) %>
@@ -11,11 +13,15 @@
 <%#= link_to 'Edit', edit_resource_path(resource) %>
 
 <div class="ticket">
-  <div class="description">
-    <%= simple_format resource.description %>    
-  </div>
+  <div class="issue">
+    <div class="description">
+      <%= simple_format resource.description %>    
+    </div>
+  </div>  
 
-  <%= render :partial => 'audit', :collection => resource.audits.reverse %>
+  <div class="audits">
+    <%= render :partial => 'audit', :collection => resource.audits.reverse %>
+  </div>
   
   <div class="ticket-actions">
     <h3>Submit comment</h3>

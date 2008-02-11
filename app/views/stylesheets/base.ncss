@@ -107,22 +107,21 @@ div.avatar {
 
 /** tickets **/
 h2.heading {
+
+  div.status {
+    float: right; 
+  }
 	
 	span.number {
 	  background: #005795;
 	  color: #fff;
-	  float: right;
+	  display: block;
 	  text-align: center;
 	  margin-bottom: 5px;
 	  line-height: 50px;
 	  height: 50px;
 		width: 70px;
 		-moz-border-radius: 5px;
-	}
-	
-	img.state {
-		clear: right;
-		float: right;
 	}
 	
 	span.reported {
@@ -148,7 +147,7 @@ div.ticket {
 		border-width: 0 0px 2px 0;
 		x-moz-border-radius: 5px;
 		
-		div.header {
+		div.heading {
   	  font-size: 1.6em;
 		}
 		

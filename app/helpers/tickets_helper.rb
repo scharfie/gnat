@@ -1,6 +1,7 @@
 module TicketsHelper
   def ticket_state(ticket)
-    image_tag "states/#{ticket.current_state}.png", :class => 'state'
+    # image_tag "states/#{ticket.current_state}.png", :class => 'state'
+    badge ticket.current_state
   end
   
   def audit_state(audit)

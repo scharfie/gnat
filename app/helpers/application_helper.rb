@@ -15,7 +15,15 @@ module ApplicationHelper
     content_tag :span, text, options
   end
   
-  def avatar(user=nil)
-    "<div class=\"avatar\">" + image_tag('avatar.gif') + '</div>'
+  def badge(text)
+    %{<span class="badge badge-#{text}">#{text}</span>}
+  end
+  
+  def avatar(user=nil, options={})
+    options.reverse_merge! :badge => false
+    "<div class=\"avatar\">" + 
+      image_tag('avatar.gif') + 
+      (options[:badge] && user.developer? ? badge('developer') : '') +
+    '</div>'
   end
 end

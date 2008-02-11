@@ -3,6 +3,11 @@ body {
   background: #444; 
 }
 
+#main {
+  background: #ddd;
+}
+
+
 #header {
   background: #242424;
   
@@ -45,18 +50,93 @@ body {
   }
 }
 
+span.badge {
+  display: block;
+  width: 70px;
+  padding: 3px 0;
+  background: #777;
+  color: #fff;
+  text-align: center;
+  font: normal 13px Arial;
+  text-transform: lowercase;
+}
+
+span.badge-open     { background: #418FDE; /*#4DA5F5*/ }
+span.badge-invalid  { background: #900;   }
+span.badge-new      { background: purple; }
+span.badge-resolved { background: green; }
+span.badge-developer { background: orange; }
+
 div.ticket {
   div.description {
     color: #f5f5f5;
     xfont-size: 1.4em;
   }
-  
+
+  div.audits {
+  }
+
   div.audit {
     margin-left: 2.5em;
+    position: relative;
+    background: #fff;
+    
+    /** trying out something **/
+    div.heading {
+      font-size: 1.4em;
+      float: left;
+      width: 150px;
+      clear: left;
+      
+      div.avatar {
+        float: left;
+      }
+      
+      span.user {
+        font-size: 0.8em;
+      }  
+      
+      span.stamp {
+        xposition: absolute;
+        xright: 10px;
+        xbottom: 10px;
+      }
+    }
+    
+    div.description {
+      xfloat: left;
+      margin-left: 160px;
+      padding: 0;
+    }
+    
+    ul.changes {
+      list-style: square;
+    }
+    
+    ul.changes li {
+      color: #69c;
+      font-size: 0.95em;
+    }
+    
+    xborder-bottom: none;
+    xborder: solid 10px transparent;
+    xborder-width: 0 0 0 10px;
+    /** trying out something **/
+  }
+  
+  div.audit-odd {
+    background: #f5f5f5;
+  }
+  
+  div.audit-dev {
+    xborder-bottom: none;
+    xborder: solid 10px #69c;
+    xborder-width: 0 0 0 10px;
+    xborder-color: #69c;
   }
 }
 
-h2.heading, div.ticket div.description {
+h2.heading, div.issue div.description {
   background: #333;
 }
 
@@ -74,7 +154,7 @@ dl#projects {
 
 div.ticket-actions h3 {
   font-size: 1.3em;
-  font-weight: bold;
-  background: #AEE9FE;
-  color: #369;
+  font-weight: normal;
+  color: #fff;
+  background: #69c;
 }
