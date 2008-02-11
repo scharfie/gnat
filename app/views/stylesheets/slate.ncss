@@ -1,0 +1,80 @@
+body {
+  background: #f5f5f5; 
+  background: #444; 
+}
+
+#header {
+  background: #242424;
+  
+  div#tabs {
+    a {
+      background: #333;
+      color: #fff;
+      
+      :hover {
+        background: #444; 
+      }
+    } 
+  }
+  
+  table.project {
+    font-size: 1em;
+    color: #777;
+    
+    td {
+      xvertical-align: middle;
+      padding-right: 10px; 
+      font-size: 2.4em; 
+    }
+    
+    td.system {
+      color: #fff;
+    }
+    
+    span.slogan {
+      display: block;
+      color: #999;
+      margin-top: -3px;
+      font-size: 0.45em;
+    }
+    
+    td.project {
+      color: #fff;
+      color: #AEE9FE;
+    }
+  }
+}
+
+div.ticket {
+  div.description {
+    color: #f5f5f5;
+    xfont-size: 1.4em;
+  }
+  
+  div.audit {
+    margin-left: 2.5em;
+  }
+}
+
+h2.heading, div.ticket div.description {
+  background: #333;
+}
+
+h2.heading {
+  span.number {
+    background: #303030; 
+  }
+}
+
+dl#projects {
+  dt a {
+    font-size: 2.4em; 
+  }
+}
+
+div.ticket-actions h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  background: #AEE9FE;
+  color: #369;
+}

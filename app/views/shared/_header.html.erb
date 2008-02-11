@@ -7,12 +7,17 @@
     <% end %>
   </div>
   
-  <h1>
-    <span class="gnat">gnat</span>
-    <% if current_project %>
-    | <span class="project"><%= current_project.name %></span>
-    <% end %>
-  </h1>
+  <table class="project">
+    <tr>
+      <td class="system">
+        <span class="system">gnat</span>
+        <span class="slogan">pester me</span>
+      </td>
+      <td class="project">
+        <%= current_project.name if current_project %>
+      </td>  
+    </tr>
+  </table>
   
   <div id="tabs">
     <ul>

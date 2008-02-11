@@ -1,6 +1,6 @@
 <% heading 'Projects' %>
 
-<dl>
+<dl id="projects">
   <% for project in resources %>
   <dt><%= link_to(project.name, project) %></dt>
   <dd><%= project.description %></dd>
