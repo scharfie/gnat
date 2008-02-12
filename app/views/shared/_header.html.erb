@@ -3,7 +3,7 @@
     <% if logged_in? %>
       <%= current_user.username %>
     <% else %>  
-      Not logged in
+      <%= link_to 'Sign in', login_url %>
     <% end %>
   </div>
   

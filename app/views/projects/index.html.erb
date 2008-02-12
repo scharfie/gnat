@@ -1,8 +1,12 @@
 <% heading 'Projects' %>
 
-<dl id="projects">
-  <% for project in resources %>
-  <dt><%= link_to(project.name, project) %></dt>
-  <dd><%= project.description %></dd>
-  <% end %>
-</dl>  
+<table class="data projects">
+  <thead>
+    <tr>
+      <th class="name left">Project</th>
+      <th class="description"><nobr>Description</nobr></th>
+      <th class="tickets right">Tickets</th>
+    </tr>
+  </thead>  
+  <%= render :partial => 'project', :collection => resources %>
+</table>

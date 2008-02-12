@@ -4,7 +4,7 @@ body {
 }
 
 a {
-	color: #590;
+	color: #69c;
 }
 
 p {
@@ -22,6 +22,10 @@ h2.heading {
 	padding: 10px;
 	font-size: 1.6em;
 	-moz-border-radius: 5px 5px 0 0;
+	
+	a {
+	 	color: #AEE9FE; 
+  }
 }
 
 #header {
@@ -213,7 +217,7 @@ div.ticket-actions {
 	}
 }
 
-table.tickets {
+table.data {
 	width: 100%;
 	border-bottom: solid 1px #ccc;
 	color: #333;
@@ -235,12 +239,16 @@ table.tickets {
 	  color: #555;
 	  font-size: 0.95em;
 	
-		.number {
+		.left {
 		  -moz-border-radius: 10px 0 0 0;	
+		  padding-left: 10px;
+		}
+		
+		.number {
 		  text-align: center;
 		}
 	
-		.stamp {
+		.stamp, .right {
 			-moz-border-radius: 0 10px 0 0;
 		}
   }
@@ -254,6 +262,11 @@ table.tickets {
 		  width: 3em;
 		  font-weight: bold;
   		color: #777;
+		}
+		
+		.name {
+		  font-weight: bold;
+		  padding-left: 10px;
 		}
 		
 		.status {
@@ -278,4 +291,17 @@ table.tickets {
   tr:hover a {
 	  color: #fff;
   }
+}
+
+table.form {
+  input { font-size: 14px; padding: 2px; }
+  label { font-weight: bold;}
+
+  td {
+    padding: 0 10px 5px 0;
+  }  
+}
+
+#footer {
+  display: none;
 }

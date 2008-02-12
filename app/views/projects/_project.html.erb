@@ -1,0 +1,5 @@
+  <tr class="<%= cycle('odd', '') %>">
+    <td class="name"><%= link_to project.name, project %></td>
+    <td class="desc"><%= project.description  %></td>
+    <td class="tickets"><%= (e = project.active_tickets.count) > 0 ? e : '-' %></td>
+  </tr>

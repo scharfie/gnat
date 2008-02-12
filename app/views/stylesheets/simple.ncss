@@ -1,0 +1,20 @@
+div#header { 
+  display: none;
+}
+
+div#main { 
+  width: 500px; 
+  margin: 50px auto; 
+}
+
+table.form {
+  margin-left: 20px;
+  
+  td.info {
+    width: 70px;
+  }  
+}
+
+div.actions {
+  margin-left: 100px;
+}

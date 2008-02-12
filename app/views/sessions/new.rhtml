@@ -1,14 +1,28 @@
+<style type="text/css" media="screen">
+</style>
+
+<% heading 'Sign in' + span(' or ') + link_to('Register', signup_url) %>
+<% head stylesheet_link_tag('simple') %>
 <% form_tag session_path do -%>
-<p><label for="login">Login</label><br/>
-<%= text_field_tag 'login' %></p>
+<table class="form">
+  <tr>
+    <td class="info"><label for="login">Username:</label></td>
+    <td><%= text_field_tag 'login', nil, :size => 35 %></td>
+  </tr>  
+  <tr>
+    <td class="info"><label for="password">Password:</label></td>
+    <td><%= password_field_tag 'password' %>
+    </td>
+  </tr>
 
-<p><label for="password">Password</label><br/>
-<%= password_field_tag 'password' %></p>
+  <tr>
+    <td class="info"></td>
+    <td><%= check_box_tag 'remember_me' %><label for="remember_me">Remember me</label></td>  
+  </tr>
+</table>  
 
-<!-- Uncomment this if you want this functionality
-<p><label for="remember_me">Remember me:</label>
-<%= check_box_tag 'remember_me' %></p>
--->
+<div class="actions">
+  <%= submit_tag 'Log in' %>
+</div>
 
-<p><%= submit_tag 'Log in' %></p>
 <% end -%>

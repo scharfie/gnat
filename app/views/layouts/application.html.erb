@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>gnat</title>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery', 'application' %>
   <%= stylesheet_link_tag 'reset', 'base', 'slate' %>
   <%= yield :head %>
 </head>
@@ -16,6 +16,9 @@
       <h2 class="heading"><%= yield :heading %></h2>
       <%= yield %>
     </div>  
+  </div>
+  <div id="footer">
+    gnat: pester me
   </div>
 </div>
 </body>
