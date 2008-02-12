@@ -1,0 +1,10 @@
+<% heading 'Search results' %>
+<div id="results">
+<% @results.each do |key, results| %>
+  <% next if results.empty? %>
+  <h3><%= key %></h3>
+  <dl>
+    <%= render :partial => 'result', :collection => results %>
+  </dl>
+<% end %>
+</div>

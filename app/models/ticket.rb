@@ -1,4 +1,5 @@
 class Ticket < ActiveRecord::Base
+  acts_as_ferret :fields => [:title, :description]
   acts_as_audited :except => [:project_id]
   acts_as_state_machine :initial => :new, :column => :status
   

@@ -28,6 +28,10 @@ h2.heading {
   }
 }
 
+h3 {
+  font: bold 1.3em Lucida Grande;
+}
+
 #header {
 	background: #02243C;
 	color: #fff;
@@ -71,6 +75,10 @@ h2.heading {
 		
 		  .all {
 			  margin-left: 25px;
+			}
+			
+			.current a {
+			  background: #444;
 			}
 		}
 		
@@ -304,4 +312,21 @@ table.form {
 
 #footer {
   display: none;
+}
+
+#search {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  input {
+    float: left;
+    margin-right: 5px;
+    border: none;
+    padding: 3px;
+    font-size: 12px;
+  }
+  
+  span.badge {
+    float: left;
+  }  
 }

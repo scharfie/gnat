@@ -21,12 +21,14 @@
   
   <div id="tabs">
     <ul>
-      <li><%= link_to 'Projects', projects_path %></li>
-      <% if current_project %>
-      <li><%= link_to 'Tickets', project_tickets_path(current_project) %></li>
-      <% end %>
-      
-      <li class="all"><%= link_to 'All tickets', tickets_path %>
+      <%= tabs %>
     </ul>  
+  </div> 
+  
+  <div id="search"> 
+    <% form_tag search_path, :method => :get do %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= link_to_function badge('search'), '$("#search form")[0].submit();' %>
+    <% end %>
   </div>  
 </div>

@@ -29,3 +29,6 @@
 - dir: vendor/plugins/textile_editor_helper
   rev: 240
   url: http://svn.webtest.wvu.edu/repos/rails/plugins/textile_editor_helper/
+- dir: vendor/plugins/acts_as_ferret
+  rev: 316
+  url: svn://projects.jkraemer.net/acts_as_ferret/trunk/plugin/acts_as_ferret

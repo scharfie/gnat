@@ -26,4 +26,17 @@ module ApplicationHelper
       (options[:badge] && user.developer? ? badge('developer') : '') +
     '</div>'
   end
+  
+  def tabs
+    tabs = Dictionary.new
+    tabs['Projects'] = projects_path
+    tabs['Tickets']  = project_tickets_path(current_project) if current_project
+    tabs['All tickets'] = tickets_path
+    
+    tabs.map do |tab, url|
+      options = {}
+      options[:class] = 'current' if current_tab == tab
+      content_tag(:li, link_to(tab, url), options)
+    end
+  end
 end

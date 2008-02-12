@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   resources_controller_for :projects
+  self.current_tab = 'Projects'
 
 public
   def show

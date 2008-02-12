@@ -2,6 +2,8 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  cattr_accessor :current_tab
+  
   include AuthenticatedSystem
   attr_accessor :current_project
   helper_method :current_project
@@ -33,4 +35,15 @@ protected
   def get_current_user
     User.current_user = self.current_user
   end
+  
+public  
+  def current_tab
+    self.class.current_tab || nil
+  end
+  
+  def current_tab=(v)
+    self.class.current_tab = v
+  end
+  
+  helper_method :current_tab
 end
