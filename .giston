@@ -27,5 +27,5 @@
   rev: 66
   url: http://elitists.textdriven.com/svn/plugins/acts_as_state_machine/trunk
 - dir: vendor/plugins/textile_editor_helper
-  rev: 225
+  rev: 240
   url: http://svn.webtest.wvu.edu/repos/rails/plugins/textile_editor_helper/
