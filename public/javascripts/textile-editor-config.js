@@ -19,4 +19,5 @@ teButtons.push(new TextileEditorButton('ed_justifyc',		'center.png',        '=',
 teButtons.push(new TextileEditorButton('ed_justifyr',		'right.png',         '>',   '\n', 'r', 'Right Justify'));
 teButtons.push(new TextileEditorButton('ed_justify', 		'justify.png',       '<>',  '\n', 'j', 'Justify'));
 
+teButtons.push(new TextileEditorButton('ed_code',			'code.png',          '<code><pre>',   '</pre></code>',  '', 'Code', 's'));
 // teButtons.push(new TextileEditorButton('ed_code','code','@','@','c','Code'));

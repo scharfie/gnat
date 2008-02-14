@@ -1,5 +1,11 @@
 <% heading span(enclosing_resource ? enclosing_resource.name : 'All') + ' tickets' %>
 
+<% if enclosing_resource %>
+<div id="toolbar">
+  <%= link_to glyph('bug', 'Create new ticket'), new_project_ticket_url(enclosing_resource) %> 
+</div>
+<% end %> 
+
 <table class="data tickets">
   <thead>
     <tr>
@@ -12,9 +18,3 @@
   </thead>  
   <%= render :partial => 'ticket', :collection => resources %>
 </table>
-
-<% if enclosing_resource %>
-  <p>
-    <%= link_to 'Create new ticket', new_project_ticket_url(enclosing_resource) %> 
-  </p>  
-<% end %>  

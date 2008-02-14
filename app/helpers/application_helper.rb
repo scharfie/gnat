@@ -27,6 +27,10 @@ module ApplicationHelper
     '</div>'
   end
   
+  def glyph(path, text=nil)
+    [image_tag("glyphs/#{path}.png", :class => 'glyph'), text].compact.join('&nbsp;')
+  end
+  
   def tabs
     tabs = Dictionary.new
     tabs['Projects'] = projects_path

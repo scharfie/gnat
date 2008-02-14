@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "audits", :force => true do |t|
     t.integer  "auditable_id"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(:version => 10) do
     t.boolean  "developer",                               :default => false
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "super_user",                              :default => false
   end
 
 end

@@ -17,6 +17,10 @@ module SearchHelper
     ticket_result_link(result.auditable)
   end
   
+  def ticket_result_description(ticket)
+    truncate ticket.description, 200
+  end
+  
   def audit_result_description(audit)
     audit.comments
   end

@@ -1,5 +1,9 @@
 <% heading 'Projects' %>
 
+<div id="toolbar">
+  <%= link_to glyph('brick', 'Create new project'), new_project_path if current_user.super_user? %>
+</div>
+
 <table class="data projects">
   <thead>
     <tr>

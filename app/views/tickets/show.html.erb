@@ -44,17 +44,21 @@
           <label for="status-current">Leave alone</label>
         
         <% if resource.closed? %>
+          <span class="s"></span>
           <%= form.radio_button :status, 'open', :id => 'status-open' %> 
             <label for="status-open">Re-open</label>
         <% elsif current_user.developer? %>
           <% if resource.new? %>
+            <span class="s"></span>
             <%= form.radio_button :status, 'open', :id => 'status-open' %> 
               <label for="status-open">Accept</label>
           <% end %>
             <!-- <label for="status-open">accept and assign to </label>
             <select><option>me (scharfie)</option></select> -->
+          <span class="s"></span>  
           <%= form.radio_button :status, 'invalid', :id => 'status-invalid' %> 
             <label for="status-invalid">Close as invalid</label>
+          <span class="s"></span>  
           <%= form.radio_button :status, 'resolved', :id => 'status-resolved' %> 
             <label for="status-resolved">Close as resolved</label>
         <% end %>

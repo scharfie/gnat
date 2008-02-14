@@ -2,7 +2,7 @@
 <div id="results">
 <% @results.each do |key, results| %>
   <% next if results.empty? %>
-  <h3><%= key %></h3>
+  <h3><%= key %> <span>(<%= pluralize results.length, 'result' %>)</span></h3>
   <dl>
     <%= render :partial => 'result', :collection => results %>
   </dl>

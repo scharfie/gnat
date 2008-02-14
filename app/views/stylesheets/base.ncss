@@ -223,6 +223,12 @@ div.ticket-actions {
 	  font-size: 1.5em;
 	  border: solid 1px #ccc;	
 	}
+	
+	span.s {
+	  margin: 0 4px 0 8px;
+	  border-left: solid 1px #bbb;
+	  border-right: solid 1px #fff;
+	}
 }
 
 table.data {
@@ -329,4 +335,72 @@ table.form {
   span.badge {
     float: left;
   }  
+}
+
+#toolbar {
+  margin: -20px 0 20px 0;
+  padding: 3px 0 8px;
+  border-bottom: solid 1px #bbb;
+  
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    padding: 3px 5px;
+    
+    :hover {
+      color: #fff;
+      background: #0072C3;
+      background: #333;
+    }
+  }  
+}
+
+img.glyph {
+  vertical-align: bottom;
+}
+
+#results {
+  padding-bottom: 10px;
+  
+  h3 {
+    background: #0072C3;
+    padding: 10px;
+    color: #fff;
+    
+    span {
+      color: #cedeef;
+    }
+  }
+  
+  dl {
+    padding: 10px 30px 15px;
+    margin: 0 0 20px 0;
+    background: #fff;
+  }
+  
+  dt a {
+    font: bold 1.4em Arial;
+    color: #036;
+    text-decoration: none;
+    
+    background: url(/images/glyphs/bullet_gray.png) no-repeat center left;
+    padding-left: 20px;
+    margin-left: -16px;
+    
+    :hover {
+      text-decoration: underline;
+    }
+    
+    :visited  {
+      xcolor: purple;
+    }
+  }  
+  
+  dd {
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding: 3px;
+    color: #555;
+  }
 }
