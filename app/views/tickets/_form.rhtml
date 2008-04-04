@@ -7,6 +7,11 @@
     <%= form.label :description %><br />
     <%= textile_editor :ticket, :description %>
   </p>
+  
+  <p>
+    <%= form.label :estimate %><br />
+    <%= form.text_field :estimate, :style => 'width: 20%' %>
+  </p>
 
   <div class="actions">
     <%= submit_tag 'Save' %>

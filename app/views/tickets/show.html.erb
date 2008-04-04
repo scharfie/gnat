@@ -37,6 +37,10 @@
         Assign to:
         <%= form.select :assigned_to_id, ['(none)'] + User.find(:all, 
           :conditions => ['developer = ?', true]).collect { |m| [ m.login, m.id ] } %>
+          
+        &nbsp;
+        Estimate:
+        <%= form.text_field :estimate, :style => 'width: 15%' %>
       </p>
       
       <p>
@@ -47,7 +51,7 @@
           <span class="s"></span>
           <%= form.radio_button :status, 'open', :id => 'status-open' %> 
             <label for="status-open">Re-open</label>
-        <% elsif current_user.developer? %>
+        <% elsif current_user and current_user.developer? %>
           <% if resource.new? %>
             <span class="s"></span>
             <%= form.radio_button :status, 'open', :id => 'status-open' %> 
