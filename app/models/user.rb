@@ -88,4 +88,7 @@ class User < ActiveRecord::Base
 end
 
 class User
+  def self.guest
+    self.new :username => 'Guest'
+  end
 end
