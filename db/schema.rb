@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 12) do
 
   create_table "audits", :force => true do |t|
     t.integer  "auditable_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 11) do
     t.string   "status",         :default => "new"
     t.integer  "milestone_id"
     t.integer  "assigned_to_id"
+    t.integer  "estimate",       :default => 0
   end
 
   create_table "users", :force => true do |t|
