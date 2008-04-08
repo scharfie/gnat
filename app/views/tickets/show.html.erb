@@ -1,3 +1,4 @@
+<% user = resource.user %>
 <% heading do %>
   <%= avatar(resource.user) %>
   <div class="status">
@@ -6,7 +7,7 @@
   </div>  
   <span class="title"><%= resource.title %></span>
   <span class="reported">
-    Reported by Chris | <%= resource.created_on.to_s(:long) %>
+    Reported by <%= user.username %> | <%= format_time resource.created_on %>
   </span>
 <% end %>
 
@@ -35,8 +36,9 @@
         
         &nbsp;
         Assign to:
-        <%= form.select :assigned_to_id, ['(none)'] + User.find(:all, 
-          :conditions => ['developer = ?', true]).collect { |m| [ m.login, m.id ] } %>
+        <%= form.select :assigned_to_id, ['(none)'] + User.developers.collect { |m| [ m.login, m.id ] } %>
+        
+        <%= link_to_function '(to me)', "assign_to_me(#{current_user.id})" %>
           
         &nbsp;
         Estimate:
@@ -72,7 +74,11 @@
       </p>
     <% end %>
   </div>  
-  
 </div>
 
 <% head textile_editor_initialize(:framework => :jquery) %>
+<script type="text/javascript" charset="utf-8">
+  function assign_to_me(uid) {
+    $('#ticket_assigned_to_id').attr('value', uid);
+  }
+</script>

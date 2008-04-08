@@ -1,0 +1,9 @@
+<% heading 'Creating new project' %>
+
+<% form_for_resource do |form| %>
+  <%= form.text_field :name %>
+  
+  <% form.actions do %>
+    <%= submit_tag 'Save' %>
+  <% end %>
+<% end %>

@@ -4,7 +4,7 @@
     <%= avatar(audit.user, :badge => false) %>
     <span class="user"><%= audit.user.login rescue 'Anonymous' %></span>
     <span class="stamp">
-      <%= resource.created_on.to_s(:long) %>
+      <%= format_time resource.created_on %>
     </span>
   </div>
   <div class="description">

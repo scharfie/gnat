@@ -91,4 +91,8 @@ class User
   def self.guest
     self.new :username => 'Guest'
   end
+  
+  def self.developers
+    find :all, :conditions => ['developer = ?', true]
+  end
 end
