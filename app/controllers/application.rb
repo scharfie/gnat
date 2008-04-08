@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '3af1edd2f9a47186fb585ca53affeacd'
 
+  before_filter :login_required
   before_filter :get_current_user
  
   # manually load the enclosing resources
