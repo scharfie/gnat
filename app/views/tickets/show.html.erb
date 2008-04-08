@@ -29,7 +29,7 @@
     
     <% form_for_resource :builder => ActionView::Helpers::FormBuilder do |form| %>
       <%= textile_editor :ticket, :comments, :rows => 15 %>
-      
+
       <p>
         Milestone: 
         <%= form.select :milestone_id, ['(none)'] + enclosing_resource.milestones.collect { |m| [ m.name, m.id ] }, { :include_blank => false } %>
@@ -44,6 +44,10 @@
         Estimate:
         <%= form.text_field :estimate, :style => 'width: 15%' %>
       </p>
+      <p>
+        <%= form.label :due_on %>:
+        <%= form.date_select :due_on %>
+      </p>  
       
       <p>
         <%= form.radio_button :status, resource.current_state.to_s, :id => 'status-current' %> 

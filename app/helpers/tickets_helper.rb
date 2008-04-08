@@ -43,13 +43,23 @@ module TicketsHelper
     base = 'Assigned to ' + (developers[1] ? developers[1].login : 'no-one')
     base += " (was #{developers[0].login})" if developers[0]
     base
-  end  
+  end
+  
+  def audit_due_date(audit)
+    return unless values = audit.changes['due_on']
+    return if values.compact == [0]
+    
+    base = 'Due on ' + format_time(values[1], :dmy)
+    base += ' (was due ' + format_time(audit.created_at, :dmy) + ')' if values[0]
+    base
+  end
   
   def audit_changes(audit)
     changes = []
     changes << audit_state(audit)
     changes << audit_milestone(audit)
     changes << audit_assigned_to(audit)
+    changes << audit_due_date(audit)
     changes.compact!
     return if changes.empty?
     changes.map! { |e| content_tag :li, e }

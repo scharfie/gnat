@@ -4,7 +4,7 @@
     <%= avatar(audit.user, :badge => false) %>
     <span class="user"><%= audit.user.login rescue 'Anonymous' %></span>
     <span class="stamp">
-      <%= format_time resource.created_on %>
+      <%= format_time audit.created_at %>
     </span>
   </div>
   <div class="description">
@@ -12,11 +12,6 @@
       
     <%= audit.comments %>
     
-    <% audit.changes.each do |key, values| %>
-      <% next if %w(status milestone_id assigned_to_id).include?(key) %>
-      <strong><%= key %></strong>
-      <p><%= values.inspect %></p>
-    <% end %>
   </div>  
   <!-- <div class="footing">
     <span class="user"><%= audit.user.login rescue 'Anonymous' %></span>

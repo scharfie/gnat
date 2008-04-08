@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 12) do
     t.integer  "milestone_id"
     t.integer  "assigned_to_id"
     t.integer  "estimate",       :default => 0
+    t.date     "due_on"
   end
 
   create_table "users", :force => true do |t|
