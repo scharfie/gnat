@@ -46,7 +46,8 @@
       </p>
       <p>
         <%= form.label :due_on %>:
-        <%= form.date_select :due_on %>
+        <%= form.date_select :due_on, :include_blank => true %>
+        <%= link_to_function '(today)', "due_today()" %>
       </p>  
       
       <p>
@@ -84,5 +85,13 @@
 <script type="text/javascript" charset="utf-8">
   function assign_to_me(uid) {
     $('#ticket_assigned_to_id').attr('value', uid);
+  }
+  
+  function due_today() {
+    var d = new Date();
+    var base = '#ticket_due_on_';
+    $(base + '1i').attr('value', d.getFullYear());
+    $(base + '2i').attr('value', d.getMonth());
+    $(base + '3i').attr('value', d.getDate());
   }
 </script>
